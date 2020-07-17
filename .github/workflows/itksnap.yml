@@ -16,6 +16,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: ${{ env.GITHUB_WORKFLOW }}
-      run: echo $GITHUB_WORKFLOW
+    - name: Filename
+      run: echo $(basename $GITHUB_WORKFLOW .yml)
 #      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
