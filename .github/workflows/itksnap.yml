@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - ./*
-      - .github/workflows/${GITHUB_WORKFLOW}.yml
+      - .github/workflows/env.GITHUB_WORKFLOW*
   pull_request:
     paths:
       - ./*
