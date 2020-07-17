@@ -1,0 +1,23 @@
+name: itksnap
+
+on:
+  push:
+    paths:
+      - ./*
+      - .github/workflows/*
+  pull_request:
+    paths:
+      - ./*
+      - .github/workflows/*
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Filename
+      run: echo $(basename $GITHUB_WORKFLOW .yml)
+#      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
